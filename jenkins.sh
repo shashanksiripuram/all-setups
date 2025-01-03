@@ -1,5 +1,6 @@
 #STEP-1: INSTALLING GIT 
 yum install git -y
+yum install java-17-amazon-corretto -y
 
 #STEP-2: GETTING THE REPO (jenkins.io --> download -- > redhat)
 sudo wget -O /etc/yum.repos.d/jenkins.repo \
@@ -7,7 +8,6 @@ sudo wget -O /etc/yum.repos.d/jenkins.repo \
 sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io-2023.key
 
 #STEP-3: DOWNLOAD JAVA17 AND JENKINS
-yum install java-17-amazon-corretto -y
 yum install jenkins -y
 
 #STEP-4: RESTARTING JENKINS (when we download service it will on stopped state)
